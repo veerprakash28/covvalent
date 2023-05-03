@@ -1,0 +1,84 @@
+// For Viewing Databases
+
+show databases;
+
+
+
+// For using your created database (change name if it's different)
+
+use covvalent;
+
+
+
+// For Creating Categories Table
+
+CREATE TABLE categories (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    category_name VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+
+
+// For Viewing if categories table is created or not
+
+show tables;
+
+
+
+// Inserting Values in your categories table
+
+INSERT INTO categories (category_name) VALUES 
+('Electronics'),
+('Computers'),
+('Sporting Goods'),
+('Clothing'),
+('Outdoor Living'),
+('Travel Gear');
+
+
+// For Creating product_list table
+
+CREATE TABLE product_list (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    product_name VARCHAR(255) NOT NULL,
+    product_description TEXT,
+    category_id INT(11) NOT NULL,
+    product_price DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+
+
+// For Adding values to product_list table
+
+INSERT INTO product_list (product_name, product_description, category_id, product_price) VALUES 
+('iPhone 13 Pro Max', 'Apple iPhone 13 Pro Max with 512GB storage, 5G support, and Pro camera system', 1, 1499.00),
+('Samsung Galaxy S21 Ultra', 'Samsung Galaxy S21 Ultra with 256GB storage, 5G support, and 108MP camera', 1, 1199.00),
+('Dell XPS 13', 'Dell XPS 13 laptop with 11th Gen Intel Core i7 processor, 16GB RAM, and 512GB SSD', 2, 1699.99),
+('Logitech MX Master 3', 'Logitech MX Master 3 advanced wireless mouse with ultrafast scrolling and 4000 DPI precision', 2, 99.99),
+('Bose QuietComfort 35 II', 'Bose QuietComfort 35 II wireless headphones with noise cancellation and Alexa voice control', 1, 299.00),
+('Sony WH-1000XM4', 'Sony WH-1000XM4 wireless headphones with noise cancellation and 30 hours of battery life', 1, 349.99),
+('Nike Air Zoom Pegasus 38', 'Nike Air Zoom Pegasus 38 running shoes with responsive foam and Zoom Air technology', 3, 119.99),
+('Adidas Ultraboost 21', 'Adidas Ultraboost 21 running shoes with Boost technology and Primeknit upper', 3, 180.00),
+('Patagonia Better Sweater', 'Patagonia Better Sweater fleece jacket made from recycled polyester and Fair Trade Certified', 4, 139.00),
+('Levi\'s 501 Original Fit Jeans', 'Levi\'s 501 Original Fit Jeans made from durable denim and featuring a straight leg', 4, 69.50),
+('Samsung 75" 4K QLED TV', 'Samsung 75" QLED TV with 4K resolution, Quantum Processor 4K, and Dual LED backlight', 1, 2099.00),
+('LG CX 55" 4K OLED TV', 'LG CX 55" 4K OLED TV with self-lit pixels, AI ThinQ, and webOS platform', 1, 1399.99),
+('Canon EOS R6', 'Canon EOS R6 full-frame mirrorless camera with 20.1MP CMOS sensor and 4K video recording', 1, 2499.00),
+('Sony Alpha A7 III', 'Sony Alpha A7 III full-frame mirrorless camera with 24.2MP sensor and 5-axis image stabilization', 1, 1999.99),
+('Samsung Galaxy Watch 4', 'Samsung Galaxy Watch 4 with 40mm stainless steel case, AMOLED display, and built-in GPS', 1, 249.99),
+('Fitbit Charge 5', 'Fitbit Charge 5 fitness tracker with EDA sensor, heart rate monitoring, and built-in GPS', 1, 179.99),
+('Weber Spirit II E-310', 'Weber Spirit II E-310 gas grill with porcelain-enameled cast iron cooking grates and 3 burners', 5, 479.00),
+('Traeger Pro 575', 'Traeger Pro 575 pellet grill with WiFIRE technology and 575 sq. in. cooking capacity', 5, 799.99),
+('Yeti Tundra 65', 'Yeti Tundra 65 cooler with rotomolded construction and permafrost insulation', 5, 349.99),
+('Osprey Farpoint 40', 'Osprey Farpoint 40 travel backpack with 40L capacity and padded laptop sleeve', 6, 160.00);
+
+
+
+
+// For viewing categories and product_list tables
+
+select * from categories;
+select * from product_list;
