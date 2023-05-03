@@ -4,9 +4,9 @@ Backend Project in Node.js and SQL
 
 # Functions:
 
-• Fetches all products with category-wise filtering
-• Fetches categories
-• Pagination on the product list API endpoint.
+• Fetches all products with category-wise filtering\n
+• Fetches categories\n
+• Pagination on the product list API endpoint.\n
 • Search functionality to the product list API endpoint.
 
 # Steps to Follow:
@@ -47,10 +47,20 @@ Once the server is running, you can use the following endpoints to retrieve data
    1.1 For Fetching Product-list on the basis of category
 
    `curl --location 'http://localhost:3000/product-list/fetchProducts?categoryName=Sporting%20Goods&page=1&limit=5'`
+   
+   ![product_list1](https://user-images.githubusercontent.com/94482800/235915160-1131f2db-a470-42a7-96af-209556242c9f.png)
+
 
    1.2 For Fetching product-list on the basis of search (searches on product_name and product_description)
 
    `curl --location 'http://localhost:3000/product-list/fetchProducts?search=storage'`
+   
+   ![product_list2](https://user-images.githubusercontent.com/94482800/235915236-d2c6c81c-acaf-4088-bc28-a62314dff572.png)
+
 
 2. Curl for categories endpoint:
    `curl --location 'http://localhost:3000/categories/fetchCategories'`
+   
+   ![categories](https://user-images.githubusercontent.com/94482800/235915280-86e7a85e-9bee-4f6e-9e66-e3aa9a1c91b4.png)
+
+   
