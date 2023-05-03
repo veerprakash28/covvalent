@@ -4,10 +4,10 @@ Backend Project in Node.js and SQL
 
 # Functions:
 
-• Fetches all products with category-wise filtering\n
-• Fetches categories\n
-• Pagination on the product list API endpoint.\n
-• Search functionality to the product list API endpoint.
+• Fetches all products with category-wise filtering<br>
+• Fetches categories<br>
+• Pagination on the product list API endpoint.<br>
+• Search functionality to the product list API endpoint.<br>
 
 # Steps to Follow:
 
