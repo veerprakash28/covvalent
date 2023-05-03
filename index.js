@@ -3,8 +3,6 @@ const app = express();
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const routes = require("./src/routes/routes");
-const dotenv = require("dotenv");
-dotenv.config();
 const port = 3000;
 
 // DB Connection

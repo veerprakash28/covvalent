@@ -4,11 +4,11 @@ dotenv.config();
 
 // DB Connection
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "your_username",
-  password: "your_password",
-  database: "your_databaseName",
-  port: 3306,
+  host: process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "your_userName",
+  password: process.env.DB_PASSWORD || "your_password",
+  database: process.env.DATABASE || "your_databaseName",
+  port: process.env.DB_PORT || 3306,
 });
 
 con.connect((err) => {
